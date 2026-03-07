@@ -9,6 +9,10 @@ const App = () => {
   function mousekafunction(){
   alert("mouse pe se hata cursor")
   }
+  // form ka function 
+  function formkafunction(){
+    alert("form ka function input mai vale change ho rahi hai")
+  }
 
   return (
     <>
@@ -17,6 +21,10 @@ const App = () => {
         <button onClick={clickfunc}>
           click me!!
         </button>
+        // creating form 
+        <form>
+        <input type="text" onChange={formkafunction} />
+        </form>
         </div> 
     </>
   )
