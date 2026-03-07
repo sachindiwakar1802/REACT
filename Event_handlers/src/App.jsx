@@ -3,29 +3,33 @@ import React from 'react'
 const App = () => {
 
   function clickfunc() {
-    alert ("i am clicked");
+    alert("i am clicked");
   }
 
   function mousekafunction(){
-  alert("mouse pe se hata cursor")
+    alert("mouse pe se hata cursor")
   }
-  // form ka function 
-  function formkafunction(){
-    alert("form ka function input mai vale change ho rahi hai")
+
+  // form ka function
+  function formkafunction(e){
+    console.log( e.target.value)
   }
 
   return (
     <>
       <div>
-        <p onMouseOver={mousekafunction}> im a apara </p>
+        <p onMouseOver={mousekafunction}> im a para </p>
+
         <button onClick={clickfunc}>
           click me!!
         </button>
-        // creating form 
+
+        {/* creating form */}
         <form>
-        <input type="text" onChange={formkafunction} />
+          <input type="text" onChange={formkafunction} />
         </form>
-        </div> 
+
+      </div>
     </>
   )
 }
