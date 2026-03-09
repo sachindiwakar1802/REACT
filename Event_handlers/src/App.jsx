@@ -2,35 +2,28 @@ import React from 'react'
 
 const App = () => {
 
-  function clickfunc() {
-    alert("i am clicked");
+  function activateLasers(){
+    alert("Lasers Activated!")
   }
 
-  function mousekafunction(){
-    alert("mouse pe se hata cursor")
-  }
-
-  // form ka function
-  function formkafunction(e){
-    console.log( e.target.value)
+  function handleSubmit(){
+    console.log("You clicked submit.")
+    return false
   }
 
   return (
-    <>
-      <div>
-        <p onMouseOver={mousekafunction}> im a para </p>
+    <div>
+      App
 
-        <button onClick={clickfunc}>
-          click me!!
-        </button>
+      <button onClick={activateLasers}>
+        Activate Lasers
+      </button>
 
-        {/* creating form */}
-        <form>
-          <input type="text" onChange={formkafunction} />
-        </form>
+      <form onSubmit={handleSubmit}>
+        <button type="submit">Submit</button>
+      </form>
 
-      </div>
-    </>
+    </div>
   )
 }
 
