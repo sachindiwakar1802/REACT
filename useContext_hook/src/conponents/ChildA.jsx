@@ -1,11 +1,13 @@
-import React from 'react'
-import ChildB from'./ChildB'
+import React from "react";
+import ChildB from "./ChildB";
+
 const ChildA = () => {
   return (
-    <>
-    <ChildB/>
-    </>
-  )
-}
+    <div>
+      <h2>Child A</h2>
+      <ChildB />
+    </div>
+  );
+};
 
-export default ChildA
+export default ChildA;
